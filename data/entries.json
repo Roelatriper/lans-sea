@@ -729,5 +729,101 @@
       "自嘲",
       "社交"
     ]
+  },
+  {
+    "id": "ai-ni-lao-ji",
+    "term": "爱你老己",
+    "pinyin": "ài nǐ lǎo jǐ",
+    "aliases": ["爱你老己，明天见"],
+    "definitions": [
+      {
+        "meaning": "把自己亲切地称作老己，像对老朋友一样表达关爱与鼓励。",
+        "usage": "常用于日常记录、自我安慰或犒劳自己的场景，语气亲昵、带一点幽默；关爱自己不一定要靠消费。",
+        "examples": [
+          "今天的事已经尽力了，早点睡吧。爱你老己，明天见。",
+          "终于抽空做了一顿自己喜欢的饭，爱你老己。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "“爱你老己”：最热的梗，也是最坚韧的力量",
+        "url": "https://www.zgjssw.gov.cn/yaowen/202601/t20260112_8551392.shtml",
+        "kind": "explanation",
+        "publisher": "新华日报（中共江苏省委新闻网刊载）"
+      },
+      {
+        "title": "千笔楼丨爱你，老己！",
+        "url": "https://www.news.cn/politics/20260218/74f12aa5b9614304b070394e78b91111/c.html",
+        "kind": "usage",
+        "publisher": "新华社"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-09",
+    "status": "published",
+    "tags": ["情绪", "生活"]
+  },
+  {
+    "id": "huo-ren-gan",
+    "term": "活人感",
+    "pinyin": "huó rén gǎn",
+    "aliases": [],
+    "definitions": [
+      {
+        "meaning": "真实、自然、有情绪和生活细节，让人感到鲜活而亲近的状态或表达质感。",
+        "usage": "常用来赞赏人物、作品或社交表达中自然流露的性情与不完美；这是主观感受，不是判断内容是否由 AI 生成的标准。",
+        "examples": [
+          "她分享做饭翻车时的真实反应，比精修照片更有活人感。",
+          "这段访谈保留了笑场和临时追问，很有活人感。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "什么样的文艺质感更受青睐",
+        "url": "https://paper.people.com.cn/rmrb/pc/content/202512/09/content_30119185.html",
+        "kind": "explanation",
+        "publisher": "人民日报"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-09",
+    "status": "published",
+    "tags": ["评价", "生活"]
+  },
+  {
+    "id": "cong-hang-dao-la",
+    "term": "从夯到拉",
+    "pinyin": "cóng hāng dào lā",
+    "aliases": [],
+    "definitions": [
+      {
+        "meaning": "把同类事物按评价从好到差分档排名，夯表示最高档，拉表示最低档。",
+        "usage": "常见于视频盘点、推荐榜单和分级表，带玩梗或锐评语气。排名取决于作者的标准，中间档位可以变化。",
+        "examples": [
+          "我按自己的口味，把这几款零食从夯到拉排了一遍。",
+          "这份电影榜是他的从夯到拉排名，我的喜好正好相反。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "来东台西溪，邂逅最“夯”冬日浪漫！",
+        "url": "https://www.xhby.net/content/s694e3673e4b096256d6bb8c8.html",
+        "kind": "explanation",
+        "publisher": "新华报业网"
+      },
+      {
+        "title": "国内万事达卡从夯到拉排名",
+        "url": "https://www.bilibili.com/opus/1120518218368155655",
+        "kind": "usage",
+        "publisher": "哔哩哔哩 UP 主 E少修"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-09",
+    "status": "published",
+    "tags": ["评价", "调侃"]
   }
 ]
