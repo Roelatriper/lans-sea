@@ -1,0 +1,55 @@
+name: Collect candidate clues
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: candidate-collection
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Keep existing pending candidates
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          # Include the pending bot branch so unmerged observations can accumulate.
+          if git ls-remote --exit-code --heads origin codex/candidates > /dev/null; then
+            git fetch origin codex/candidates
+            git show FETCH_HEAD:data/candidates.json > /tmp/pending-candidates.json
+            node scripts/merge-pending.mjs /tmp/pending-candidates.json
+          fi
+      - name: Collect public clues
+        id: collect
+        continue-on-error: true
+        run: node scripts/collect.mjs
+      - name: Validate changes
+        run: npm run check
+      - uses: peter-evans/create-pull-request@v8
+        with:
+          branch: codex/candidates
+          add-paths: |
+            data/candidates.json
+            data/collection-status.json
+          commit-message: 'chore: refresh unreviewed candidate clues'
+          title: '更新待核对线索（不发布词条）'
+          body: |
+            收集 B站、微博和抖音的公开标题与链接，保留已有待审线索。
+            此 PR 只更新候选和采集状态，不生成释义，不更改正式词库。
+            请每周核对后合并；收录词条请另提交 data/entries.json 的修改。
+            各源结果见 data/collection-status.json；来源失败不会清空队列。
+      - name: Report complete collection failure
+        if: steps.collect.outcome == 'failure'
+        run: exit 1

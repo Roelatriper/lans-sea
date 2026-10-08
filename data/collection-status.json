@@ -1,0 +1,20 @@
+{
+  "collected_at": "2026-10-08T15:52:47.304Z",
+  "sources": [
+    {
+      "platform": "bilibili",
+      "ok": true,
+      "count": 50
+    },
+    {
+      "platform": "weibo",
+      "ok": true,
+      "count": 50
+    },
+    {
+      "platform": "douyin",
+      "ok": true,
+      "count": 46
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+name: 提交新词或候选线索
+description: 提供词名、中文解释、用法与来源，供社区核对
+title: '[提词] '
+body:
+  - type: input
+    id: term
+    attributes:
+      label: 词名
+      placeholder: 请填写原词，多个词请分开提交
+    validations:
+      required: true
+  - type: textarea
+    id: meaning
+    attributes:
+      label: 中文含义和使用场景
+      description: 用自己的话说明；没有把握时可以只提交线索。
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: 例句或具体用例
+      description: 自编例句请注明；原始用例附上链接。
+  - type: textarea
+    id: sources
+    attributes:
+      label: 来源链接
+      description: 尽量提供可核验的帖子、视频、词典或报道。热榜仅是发现线索，不等于原始出处。
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 核对说明
+      options:
+        - label: 我已区分自己编写的解释与来源原文，未把未知起源写成事实。
+          required: true

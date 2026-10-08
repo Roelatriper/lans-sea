@@ -1,0 +1,733 @@
+[
+  {
+    "id": "nei-juan",
+    "term": "内卷",
+    "pinyin": "nèi juǎn",
+    "aliases": [
+      "内卷化"
+    ],
+    "definitions": [
+      {
+        "meaning": "指投入不断增加，却没有带来相应收益的内部竞争。",
+        "usage": "常用于评价学习、职场等场景的过度竞争，带批评或自嘲意味。",
+        "examples": [
+          "大家争着延长加班时间，产出却没增加，越来越内卷了。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "逆行者、后浪、打工人……2020年十大流行语揭晓",
+        "url": "https://www.xinhuanet.com/politics/2020-12/05/c_1126825006.htm",
+        "kind": "explanation",
+        "publisher": "人民日报客户端（新华网刊载）"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "竞争",
+      "职场"
+    ]
+  },
+  {
+    "id": "tang-ping",
+    "term": "躺平",
+    "pinyin": "tǎng píng",
+    "aliases": [],
+    "definitions": [
+      {
+        "meaning": "面对压力时，暂时退出竞争或降低投入与欲望。",
+        "usage": "常用来自嘲、表达疲惫或拒绝过度竞争；具体选择因人而异。",
+        "examples": [
+          "这个周末不安排任务了，我想躺平休息一下。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "2021年度十大网络用语解读",
+        "url": "https://dxs.moe.gov.cn/zx/a/jj/211207/1739940.shtml",
+        "kind": "explanation",
+        "publisher": "北京日报（中国大学生在线刊载）"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "生活",
+      "情绪"
+    ]
+  },
+  {
+    "id": "ba-bi-q-le",
+    "term": "芭比Q了",
+    "pinyin": "bā bǐ Q le",
+    "aliases": [
+      "芭比Q"
+    ],
+    "definitions": [
+      {
+        "meaning": "用来表达事情糟了、搞砸了或难以挽回。",
+        "usage": "通常是夸张的吐槽或自嘲，不一定表示真的遭遇严重后果。",
+        "examples": [
+          "出门才发现钥匙锁在屋里，芭比Q了。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "新华视点丨烂梗“侵”校园，如何管？",
+        "url": "https://www2.xinhuanet.com/politics/20251104/014e7ab57cde4765be377d99029fa388/c.html",
+        "kind": "usage",
+        "publisher": "新华社"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "谐音",
+      "吐槽"
+    ]
+  },
+  {
+    "id": "she-kong",
+    "term": "社恐",
+    "pinyin": "shè kǒng",
+    "aliases": [],
+    "definitions": [
+      {
+        "meaning": "网络口语中指不擅长、害怕或不愿参与社交的状态。",
+        "usage": "常作为自嘲标签；日常说自己社恐，不等于被诊断为社交焦虑障碍。",
+        "examples": [
+          "第一次参加陌生人的聚会，我这个社恐先在角落坐一会儿。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "逃避社交的你，真的“社恐”吗？",
+        "url": "https://health.people.com.cn/n1/2022/1119/c14739-32569780.html",
+        "kind": "explanation",
+        "publisher": "中国青年报（人民网刊载）"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "社交",
+      "自嘲"
+    ]
+  },
+  {
+    "id": "jue-jue-zi",
+    "term": "绝绝子",
+    "pinyin": "jué jué zi",
+    "aliases": [],
+    "definitions": [
+      {
+        "meaning": "夸张地表示特别好、令人赞叹。",
+        "usage": "多见于评论、聊天中的赞美，属于轻松口语表达。",
+        "examples": [
+          "这个舞台的灯光和表演配合得绝绝子。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "2021年度十大网络用语解读",
+        "url": "https://dxs.moe.gov.cn/zx/a/jj/211207/1739940.shtml",
+        "kind": "explanation",
+        "publisher": "北京日报（中国大学生在线刊载）"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "赞美"
+    ]
+  },
+  {
+    "id": "yyds",
+    "term": "YYDS",
+    "pinyin": "yǒng yuǎn de shén",
+    "aliases": [
+      "yyds",
+      "永远的神"
+    ],
+    "definitions": [
+      {
+        "meaning": "永远的神的拼音首字母缩写，表达强烈赞赏或敬佩。",
+        "usage": "常用于称赞人物、作品或表现；语气夸张，并非字面的神明称谓。",
+        "examples": [
+          "这位选手最后一局发挥太稳了，YYDS！"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "2021年度十大网络用语解读",
+        "url": "https://dxs.moe.gov.cn/zx/a/jj/211207/1739940.shtml",
+        "kind": "explanation",
+        "publisher": "北京日报（中国大学生在线刊载）"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "缩写",
+      "赞美"
+    ]
+  },
+  {
+    "id": "po-fang-le",
+    "term": "破防了",
+    "pinyin": "pò fáng le",
+    "aliases": [
+      "破防"
+    ],
+    "definitions": [
+      {
+        "meaning": "心理防线受到冲击，难以维持原先的情绪状态。",
+        "usage": "可以表达被感动、难过或受到刺激；具体情绪需结合上下文判断。",
+        "examples": [
+          "看到毕业前同学写给我的留言，我破防了。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "2021年度十大网络用语解读",
+        "url": "https://dxs.moe.gov.cn/zx/a/jj/211207/1739940.shtml",
+        "kind": "explanation",
+        "publisher": "北京日报（中国大学生在线刊载）"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "情绪"
+    ]
+  },
+  {
+    "id": "fan-er-sai",
+    "term": "凡尔赛",
+    "pinyin": "fán ěr sài",
+    "aliases": [
+      "凡尔赛文学",
+      "凡学"
+    ],
+    "definitions": [
+      {
+        "meaning": "用抱怨、谦虚或看似平常的语气暗中炫耀。",
+        "usage": "既可指出他人的炫耀，也可故意模仿这种说法来调侃。",
+        "examples": [
+          "他说换了大房子以后打扫太累，大家笑他又在凡尔赛。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "逆行者、后浪、打工人……2020年十大流行语揭晓",
+        "url": "https://www.xinhuanet.com/politics/2020-12/05/c_1126825006.htm",
+        "kind": "explanation",
+        "publisher": "人民日报客户端（新华网刊载）"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "调侃",
+      "社交"
+    ]
+  },
+  {
+    "id": "emo-le",
+    "term": "emo了",
+    "pinyin": "emo le",
+    "aliases": [
+      "emo"
+    ],
+    "definitions": [
+      {
+        "meaning": "表示情绪低落、伤感、失落或忧郁。",
+        "usage": "用于非正式聊天和自我表达；不能据此认定某人患有抑郁症。",
+        "examples": [
+          "期待了很久的旅行取消了，我有点emo了。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "从“安心”到“安身”，历史学教授谈“后疫情”时代年轻人如何应对EMO",
+        "url": "https://m.cyol.com/gb/articles/2022-05/29/content_lxGRmfWRL.html",
+        "kind": "explanation",
+        "publisher": "中国青年报"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "情绪"
+    ]
+  },
+  {
+    "id": "shuan-q",
+    "term": "栓Q",
+    "pinyin": "shuān Q",
+    "aliases": [
+      "栓q",
+      "我真的栓Q"
+    ],
+    "definitions": [
+      {
+        "meaning": "借英文thank you的近音表达，网络上常用于反讽，表示无语、厌烦或无奈。",
+        "usage": "需要结合语境判断，看到栓Q不能直接当作真诚感谢。",
+        "examples": [
+          "排了半小时队才发现走错窗口，我真的栓Q。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "《语言文字周报》发布年度热词榜：“栓Q”“团长”都在列",
+        "url": "https://www.thepaper.cn/newsDetail_forward_21092208",
+        "kind": "explanation",
+        "publisher": "澎湃新闻"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "谐音",
+      "反讽"
+    ]
+  },
+  {
+    "id": "wu-yu",
+    "term": "无语",
+    "pinyin": "wú yǔ",
+    "aliases": [],
+    "definitions": [
+      {
+        "meaning": "表示无话可说，常传达无奈、不满或难以理解。",
+        "usage": "可单独回复，也可说对某事很无语；语气轻重依上下文而定。",
+        "examples": [
+          "说好的时间又改了，我真的很无语。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "舆情周报：“面包新语”和“郑文琪龙虾盖浇饭”陷安全风波",
+        "url": "https://www.people.com.cn/n/2015/0826/c398010-27521167.html",
+        "kind": "usage",
+        "publisher": "人民网"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "情绪",
+      "吐槽"
+    ]
+  },
+  {
+    "id": "xian-yan-bao",
+    "term": "显眼包",
+    "pinyin": "xiǎn yǎn bāo",
+    "aliases": [],
+    "definitions": [
+      {
+        "meaning": "形容在人群中格外引人注意、行为或形象突出的人，也用于有趣醒目的事物。",
+        "usage": "常带调侃或喜爱意味；不必然指故意博取关注的人。",
+        "examples": [
+          "合照时他举起两根香蕉当耳朵，真是个显眼包。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "博物馆的“显眼包”应成历史文化的“显影剂”",
+        "url": "https://dzb.whb.cn/imgPath/2023-12-07/51207.pdf",
+        "kind": "usage",
+        "publisher": "文汇报"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "调侃",
+      "社交"
+    ]
+  },
+  {
+    "id": "yao-yao-ling-xian",
+    "term": "遥遥领先",
+    "pinyin": "yáo yáo lǐng xiān",
+    "aliases": [],
+    "definitions": [
+      {
+        "meaning": "表示远远超过他人；网络语境中常以夸张口吻赞美或调侃优势。",
+        "usage": "可是真实称赞，也可带反讽，不能仅凭这句话认定实际排名或性能。",
+        "examples": [
+          "他收集的表情包数量在群里遥遥领先。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "众多“显眼包”凭实力出圈，这届亚运会“遥遥领先”",
+        "url": "https://jres2023.xhby.net/zt/jjhzyyh/rmkd/202310/t20231008_8111416.shtml",
+        "kind": "usage",
+        "publisher": "新华报业网"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "赞美",
+      "调侃"
+    ]
+  },
+  {
+    "id": "xiao-tu-dou",
+    "term": "小土豆",
+    "pinyin": "xiǎo tǔ dòu",
+    "aliases": [
+      "南方小土豆"
+    ],
+    "definitions": [
+      {
+        "meaning": "在东北旅游话题中，常用来称呼前往当地的南方游客。",
+        "usage": "常见于旅游宣传和自称；称呼他人前应留意对方是否接受。",
+        "examples": [
+          "我们几个南方小土豆第一次来哈尔滨看雪。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "“南方小土豆”：“尔滨”让人安全感十足",
+        "url": "https://www.chinanews.com.cn/sh/2024/01-17/10147423.shtml",
+        "kind": "usage",
+        "publisher": "法治日报（中国新闻网刊载）"
+      },
+      {
+        "title": "Tourism Branding for the Greater Bay Area",
+        "url": "https://www.polyu.edu.hk/htm/emailer/GBA/GBA_report_202503/Tourism_Branding_for_GBA_Report_SC.pdf",
+        "kind": "explanation",
+        "publisher": "香港理工大学酒店及旅游业管理学院"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "旅游",
+      "称呼"
+    ]
+  },
+  {
+    "id": "po-tian-fu-gui",
+    "term": "泼天富贵",
+    "pinyin": "pō tiān fù guì",
+    "aliases": [
+      "泼天的富贵"
+    ],
+    "definitions": [
+      {
+        "meaning": "夸张地形容突然到来的巨大收益、好运或发展机会。",
+        "usage": "常用于讨论商家、城市因热度获得大量客流或商业机会，不是具体财富数额。",
+        "examples": [
+          "短视频让小店突然爆红，这波泼天富贵还得靠好服务接住。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "新华调查丨透视文旅持续“沸腾”：“流量”如何变“留量”？",
+        "url": "https://www.news.cn/politics/20240128/5a152910a1d74c4ba78e15ee94af8bae/c.html",
+        "kind": "usage",
+        "publisher": "新华社"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "生活",
+      "商业"
+    ]
+  },
+  {
+    "id": "you-nei-wei-le",
+    "term": "有内味了",
+    "pinyin": "yǒu nèi wèi le",
+    "aliases": [
+      "有那味了"
+    ],
+    "definitions": [
+      {
+        "meaning": "表示某种熟悉的风格、感觉或特点已经表现出来。",
+        "usage": "内味近似那味的读音；可用于认可，也可用于模仿或调侃，依语境判断。",
+        "examples": [
+          "换上老式字体和背景音乐，这个复古广告有内味了。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Catch Phrase | 有内味了",
+        "url": "https://www.eyeshenzhen.com/content/2020-12/10/content_23796684.htm",
+        "kind": "explanation",
+        "publisher": "Shenzhen Daily"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "谐音",
+      "评价"
+    ]
+  },
+  {
+    "id": "wo-tai-nan-le",
+    "term": "我太难了",
+    "pinyin": "wǒ tài nán le",
+    "aliases": [
+      "我太南了"
+    ],
+    "definitions": [
+      {
+        "meaning": "表达自己遇到困难、压力很大或事情不顺利。",
+        "usage": "常带幽默、自嘲意味，用于吐槽生活和工作的压力。",
+        "examples": [
+          "三项任务都要今天交，我太难了。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "困难是走向成熟的台阶（创见）",
+        "url": "https://opinion.people.com.cn/n1/2019/1229/c1003-31527157.html",
+        "kind": "usage",
+        "publisher": "人民日报"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "情绪",
+      "自嘲"
+    ]
+  },
+  {
+    "id": "hei-ren-tai-guan",
+    "term": "黑人抬棺",
+    "pinyin": "hēi rén tái guān",
+    "aliases": [
+      "抬棺舞",
+      "Coffin Dance"
+    ],
+    "definitions": [
+      {
+        "meaning": "指加纳抬棺人员边抬棺边跳舞的影像，以及由此制作的网络迷因。",
+        "usage": "二次创作常把这段影像放在失败或危险场景之后，形成黑色幽默；勿据此概括整个加纳的葬礼习俗。",
+        "examples": [
+          "这个游戏失误集锦在失败镜头后接了黑人抬棺的片段。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "《跨文化传播研究》| 郭苏南：“黑人抬棺”全球走红：文化间生死观的交流与冲突",
+        "url": "https://media.whu.edu.cn/c/20230407intk",
+        "kind": "explanation",
+        "publisher": "武汉大学媒体发展研究中心"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "视频",
+      "黑色幽默"
+    ]
+  },
+  {
+    "id": "yi-qi-pa-shan-ma",
+    "term": "一起爬山吗",
+    "pinyin": "yì qǐ pá shān ma",
+    "aliases": [],
+    "definitions": [
+      {
+        "meaning": "借悬疑剧《隐秘的角落》的爬山情节，形成带危险暗示的玩笑。",
+        "usage": "属于影视梗和黑色幽默；普通登山邀请也可能只是字面意思。",
+        "examples": [
+          "聊到《隐秘的角落》时，他发了一张一起爬山吗的表情包。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "《隐秘的角落》带火众多同款",
+        "url": "https://www.chinanews.com/m/yl/2020/07-07/9231055.shtml",
+        "kind": "explanation",
+        "publisher": "北京青年报（中国新闻网刊载）"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "影视",
+      "黑色幽默"
+    ]
+  },
+  {
+    "id": "ye-qing-hui",
+    "term": "爷青回",
+    "pinyin": "yé qīng huí",
+    "aliases": [
+      "爷的青春回来了"
+    ],
+    "definitions": [
+      {
+        "meaning": "爷的青春回来了的缩写，表达重见熟悉事物时的怀旧和激动。",
+        "usage": "常用于老作品重现、经典人物回归或唤起青春记忆的场景。",
+        "examples": [
+          "小时候喜欢的动画重新播出了，爷青回！"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "2020年度弹幕来啦~爷爷你关注的UP主更新啦！",
+        "url": "https://www.bilibili.com/video/BV14541157NY/",
+        "kind": "usage",
+        "publisher": "哔哩哔哩：岁岁年年度弹幕"
+      },
+      {
+        "title": "B站发布2020年度弹幕：爷的青春回来了",
+        "url": "https://www.digitaling.com/projects/142366.html",
+        "kind": "usage",
+        "publisher": "数英（B站年度弹幕项目页）"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "缩写",
+      "怀旧"
+    ]
+  },
+  {
+    "id": "da-gong-ren",
+    "term": "打工人",
+    "pinyin": "dǎ gōng rén",
+    "aliases": [],
+    "definitions": [
+      {
+        "meaning": "劳动者对自己的调侃式称呼，网络用法涵盖多种职业。",
+        "usage": "常见于工作吐槽和互相鼓励，不只指体力劳动者。",
+        "examples": [
+          "早上挤完地铁又开会，打工人的一天开始了。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "逆行者、后浪、打工人……2020年十大流行语揭晓",
+        "url": "https://www.xinhuanet.com/politics/2020-12/05/c_1126825006.htm",
+        "kind": "explanation",
+        "publisher": "人民日报客户端（新华网刊载）"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "职场",
+      "自嘲"
+    ]
+  },
+  {
+    "id": "beng-bu-zhu-le",
+    "term": "蚌埠住了",
+    "pinyin": "bèng bù zhù le",
+    "aliases": [
+      "绷不住了"
+    ],
+    "definitions": [
+      {
+        "meaning": "绷不住了的谐音写法，表示快控制不住情绪或表情。",
+        "usage": "可能是忍不住笑、哭或生气，需结合内容判断；蚌埠在这里用于谐音。",
+        "examples": [
+          "看到猫把自己吓了一跳的视频，我蚌埠住了。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Catch Phrase | 蚌埠住了",
+        "url": "https://www.eyeshenzhen.com/content/2021-12/07/content_24796051.htm",
+        "kind": "explanation",
+        "publisher": "Shenzhen Daily"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "谐音",
+      "情绪"
+    ]
+  },
+  {
+    "id": "xiao-chou-jing-shi-wo-zi-ji",
+    "term": "小丑竟是我自己",
+    "pinyin": "xiǎo chǒu jìng shì wǒ zì jǐ",
+    "aliases": [],
+    "definitions": [
+      {
+        "meaning": "发现自己自作多情、付出落空或处境尴尬时的自嘲。",
+        "usage": "常用于人际关系或预期落空的场景；这里的小丑是自嘲比喻。",
+        "examples": [
+          "我以为大家在给我准备惊喜，结果是我记错了日期，小丑竟是我自己。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Catch Phrase | 小丑竟是我自己",
+        "url": "https://www.eyeshenzhen.com/content/2021-03/22/content_24064791.htm",
+        "kind": "explanation",
+        "publisher": "Shenzhen Daily"
+      }
+    ],
+    "first_seen": null,
+    "reviewed_at": "2026-10-08",
+    "status": "published",
+    "tags": [
+      "自嘲",
+      "社交"
+    ]
+  }
+]

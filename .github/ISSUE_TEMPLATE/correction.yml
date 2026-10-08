@@ -1,0 +1,23 @@
+name: 纠错或补充来源
+description: 修订中文含义、用例、拼音或失效链接
+title: '[纠错] '
+body:
+  - type: input
+    id: term
+    attributes:
+      label: 词名或词条 ID
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: 当前问题与建议修改
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 支撑修改的来源
+      description: 如有多个用法，可分别提供依据。
+    validations:
+      required: true

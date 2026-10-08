@@ -1,0 +1,15 @@
+{
+  "name": "china-meme-dictionary",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "社区维护的中文梗词典、静态数据与精确查询接口",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "node --test",
+    "check": "node scripts/build.mjs && node --test",
+    "collect": "node scripts/collect.mjs"
+  }
+}
