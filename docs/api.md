@@ -15,7 +15,7 @@
 项目 Pages URL 带仓库子路径。示例 JavaScript（无需安装 SDK）：
 
 ```js
-const base = 'https://Roelatriper.github.io/china-meme-dictionary/api/v1/';
+const base = 'https://Roelatriper.github.io/lans-sea/api/v1/';
 const indexResponse = await fetch(new URL('index.json', base));
 if (!indexResponse.ok) throw new Error(`HTTP ${indexResponse.status}`);
 const index = await indexResponse.json();

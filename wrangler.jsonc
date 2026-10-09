@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "china-meme-dictionary",
+  "name": "lans-sea",
   "main": "worker/index.js",
   "compatibility_date": "2026-10-08",
   "assets": {

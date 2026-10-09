@@ -6,7 +6,7 @@ import { lookupResponse } from '../src/dictionary.mjs';
 
 const dataset = await build();
 const port = Number(process.env.PORT || 8000);
-const suggestionUrl = 'https://github.com/Roelatriper/china-meme-dictionary/issues/new?template=meme.yml';
+const suggestionUrl = 'https://github.com/Roelatriper/lans-sea/issues/new?template=meme.yml';
 const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.json': 'application/json; charset=utf-8' };
 const server = http.createServer(async (request, response) => {
   try {
@@ -34,4 +34,4 @@ const server = http.createServer(async (request, response) => {
     response.end(JSON.stringify({ error: { code: error.code === 'ENOENT' ? 'not_found' : 'request_failed' } }));
   }
 });
-server.listen(port, '127.0.0.1', () => console.log(`梗辞典：http://127.0.0.1:${port}`));
+server.listen(port, '127.0.0.1', () => console.log(`迷因之海：http://127.0.0.1:${port}`));
