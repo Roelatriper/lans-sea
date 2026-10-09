@@ -1,6 +1,8 @@
 import { lookupResponse } from '../lib/dictionary.mjs';
+import { REPO, DRAFT_KEY, LIMITS, prepareContribution } from './contributions.mjs';
+import { mountDiscussion } from './discussions.mjs';
 
-const repo = 'https://github.com/Roelatriper/china-meme-dictionary';
+const repo = `https://github.com/${REPO}`;
 const $ = id => document.getElementById(id);
 let dataset = null;
 let activeTag = '全部';
@@ -36,7 +38,6 @@ function render() {
   $('entries').replaceChildren(...entries.map(card));
   $('resultCount').textContent = `共 ${entries.length} 条${query || activeTag !== '全部' ? '匹配结果' : '正式词条'}`;
   $('noResults').hidden = entries.length > 0;
-  $('suggestLink').href = suggestion($('search').value.trim());
 }
 function card(entry) {
   const article = node('article', undefined, 'entry-card');
@@ -47,7 +48,13 @@ function card(entry) {
   top.append(title, node('span', entry.tags[0] || '网络用语', 'card-tag'));
   const meta = node('div', undefined, 'card-meta');
   meta.append(node('span', `${entry.sources.length} 个来源 · ${entry.reviewed_at} 核对`), node('span', '↗', 'arrow'));
-  article.append(top, node('p', entry.pinyin, 'pinyin'), node('p', entry.definitions[0].meaning, 'card-meaning'), meta);
+  const discuss = node('button', '讨论这个词 ↗', 'card-discuss');
+  discuss.type = 'button';
+  discuss.setAttribute('aria-label', `讨论${entry.term}`);
+  discuss.addEventListener('click', () => {
+    openEntry(entry, discuss, true);
+  });
+  article.append(top, node('p', entry.pinyin, 'pinyin'), node('p', entry.definitions[0].meaning, 'card-meaning'), meta, discuss);
   return article;
 }
 function section(title) {
@@ -55,7 +62,7 @@ function section(title) {
   element.append(node('h3', title));
   return element;
 }
-function openEntry(entry, trigger = null) {
+function openEntry(entry, trigger = null, showDiscussion = false) {
   lastFocus = trigger || document.activeElement;
   const content = $('detailContent');
   const title = node('h2', entry.term, 'detail-title');
@@ -79,9 +86,19 @@ function openEntry(entry, trigger = null) {
   const json = new URL(`./api/v1/entries/${entry.id}.json`, location.href);
   actions.append(externalLink('读取词条 JSON ↗', json.href, 'text-link'), externalLink('补充或纠错 ↗', `${repo}/issues/new?template=correction.yml&title=${encodeURIComponent(`[纠错] ${entry.term}`)}`, 'text-link'));
   children.push(actions);
+  const discussion = section(`讨论「${entry.term}」`);
+  discussion.id = 'entryDiscussion';
+  children.push(discussion);
   content.replaceChildren(...children);
-  if (!$('entryDialog').open) $('entryDialog').showModal();
+  // The element's id also preserves this entry through giscus OAuth redirects.
   history.replaceState(null, '', `#entry/${encodeURIComponent(entry.id)}`);
+  if (!$('entryDialog').open) $('entryDialog').showModal();
+  $('entryDialog').scrollTop = 0;
+  mountDiscussion(discussion, entry).then(() => {
+    if (showDiscussion && discussion.isConnected && $('entryDialog').open) {
+      $('entryDialog').scrollTo({ top: discussion.offsetTop - 20, behavior: 'auto' });
+    }
+  });
 }
 async function demo() {
   if (!dataset) return;
@@ -100,6 +117,7 @@ $('searchForm').addEventListener('submit', event => { event.preventDefault(); re
 $('demoForm').addEventListener('submit', event => { event.preventDefault(); demo(); });
 $('closeDialog').addEventListener('click', () => $('entryDialog').close());
 $('entryDialog').addEventListener('close', () => {
+  $('detailContent').replaceChildren();
   if (location.hash.startsWith('#entry/')) history.replaceState(null, '', '#dictionary');
   lastFocus?.focus();
 });
@@ -114,6 +132,73 @@ $('copyJson').addEventListener('click', async () => {
   setTimeout(() => { $('copyJson').textContent = '复制 JSON'; }, 1800);
 });
 window.addEventListener('hashchange', fromHash);
+
+const contributionFields = {
+  term: $('contributionTerm'), meaning: $('contributionMeaning'),
+  examples: $('contributionExamples'), sources: $('contributionSources'),
+};
+let contributionDraft = null;
+function saveDraft() {
+  const values = Object.fromEntries(Object.entries(contributionFields).map(([key, element]) => [key, element.value]));
+  try {
+    localStorage.setItem(DRAFT_KEY, JSON.stringify(values));
+    $('draftStatus').textContent = '草稿已保存在当前浏览器，尚未提交。';
+  } catch { $('draftStatus').textContent = '浏览器无法保存草稿，离开前请复制备份。'; }
+}
+try {
+  const saved = JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null');
+  if (saved && typeof saved === 'object') {
+    for (const [key, element] of Object.entries(contributionFields)) {
+      if (typeof saved[key] === 'string') element.value = saved[key].slice(0, LIMITS[key]);
+    }
+    $('draftStatus').textContent = '已恢复上次草稿，尚未提交。';
+  }
+} catch { /* The form remains usable when browser storage is unavailable. */ }
+for (const element of Object.values(contributionFields)) element.addEventListener('input', () => {
+  $('contributionPreview').hidden = true;
+  contributionDraft = null;
+  saveDraft();
+});
+$('contributionConfirm').addEventListener('change', () => { $('contributionPreview').hidden = true; contributionDraft = null; });
+$('contributionForm').addEventListener('submit', event => {
+  event.preventDefault();
+  const result = prepareContribution(Object.fromEntries(Object.entries(contributionFields).map(([key, element]) => [key, element.value])));
+  for (const [key, element] of Object.entries(contributionFields)) {
+    $(`${key}Error`).textContent = result.errors[key] || '';
+    element.setAttribute('aria-invalid', String(Boolean(result.errors[key])));
+  }
+  const firstError = Object.keys(result.errors)[0];
+  if (firstError) { contributionFields[firstError].focus(); return; }
+  contributionDraft = result;
+  saveDraft();
+  $('contributionPreviewTitle').textContent = result.title;
+  $('contributionPreviewBody').textContent = result.body;
+  $('submitContribution').href = result.url;
+  $('copyContribution').textContent = '复制草稿';
+  $('contributionHandoff').textContent = result.prefilled
+    ? '内容尚未提交。下一步会打开已填好的 GitHub Issue，请确认后再提交。'
+    : '草稿较长，请先复制草稿，再到 GitHub 正文框中粘贴并确认提交。';
+  $('contributionPreview').hidden = false;
+  $('contributionPreview').scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+});
+$('copyContribution').addEventListener('click', async () => {
+  if (!contributionDraft) return;
+  try { await navigator.clipboard.writeText(contributionDraft.body); $('copyContribution').textContent = '已复制'; }
+  catch { $('copyContribution').textContent = '请选中上方草稿复制'; }
+});
+$('clearContribution').addEventListener('click', () => {
+  $('contributionForm').reset();
+  for (const [key, element] of Object.entries(contributionFields)) { element.value = ''; element.removeAttribute('aria-invalid'); $(`${key}Error`).textContent = ''; }
+  contributionDraft = null;
+  $('contributionPreview').hidden = true;
+  try { localStorage.removeItem(DRAFT_KEY); } catch { /* Storage may be disabled. */ }
+  $('draftStatus').textContent = '草稿已清空。';
+  contributionFields.term.focus();
+});
+$('suggestLink').addEventListener('click', () => {
+  if (!contributionFields.term.value.trim()) { contributionFields.term.value = $('search').value.trim().slice(0, LIMITS.term); saveDraft(); }
+  contributionFields.term.focus({ preventScroll: true });
+});
 async function init() {
   try {
     const response = await fetch('./api/v1/all.json');

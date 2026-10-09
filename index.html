@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="社区维护的中文互联网用语词典。查含义、看语境、核对来源，也可下载开放词库供程序与 AI 使用。">
   <meta name="theme-color" content="#f4f3ed">
-  <title>梗辞典 · 中文互联网用语开放词库</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23263527'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='40' fill='%23d4ef9c'%3E梗%3C/text%3E%3C/svg%3E">
+  <title>迷因之海 · 中文互联网用语开放词库</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23263527'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='40' fill='%23d4ef9c'%3E海%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="./assets/styles.css">
   <script type="module" src="./assets/app.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#search">跳到搜索</a>
   <header class="site-header wrap">
-    <a class="brand" href="#"><span class="brand-mark">梗</span><span><strong>梗辞典</strong><small>中文互联网用语开放词库</small></span></a>
+    <a class="brand" href="#"><span class="brand-mark">海</span><span><strong>迷因之海</strong><small>中文互联网用语开放词库</small></span></a>
     <nav aria-label="主导航"><a href="#dictionary">查词</a><a href="#api">接口与下载</a><a href="#contribute">共同编辑 <span aria-hidden="true">↗</span></a></nav>
     <span class="edition">开放词库 / v1</span>
   </header>
@@ -28,15 +28,31 @@
       <form id="searchForm" role="search" class="search-box"><span aria-hidden="true" class="search-icon">⌕</span><label class="sr-only" for="search">搜索词名、拼音或释义</label><input id="search" type="search" placeholder="搜索词名、拼音或释义…" autocomplete="off"><button type="submit">查词 <span aria-hidden="true">↵</span></button></form>
       <div id="filters" class="filters" aria-label="按话题筛选"></div>
       <div class="result-bar"><p id="resultCount" aria-live="polite">正在加载词库…</p><span>按核对时间排列</span></div>
-      <div id="loadError" class="empty-state" hidden><h3>词库暂时无法读取</h3><p>请刷新重试；也可以直接到仓库查看数据。</p><a class="text-link" href="https://github.com/Roelatriper/china-meme-dictionary/tree/main/data">查看词库 ↗</a></div>
+      <div id="loadError" class="empty-state" hidden><h3>词库暂时无法读取</h3><p>请刷新重试；也可以直接到仓库查看数据。</p><a class="text-link" href="https://github.com/Roelatriper/lans-sea/tree/main/data">查看词库 ↗</a></div>
       <div id="entries" class="entry-grid"></div>
-      <div id="noResults" class="empty-state" hidden><span class="empty-symbol" aria-hidden="true">＋</span><h3>还没收录你要找的词</h3><p>社区可以补充词义、用例与来源，核对后再进入正式词库。</p><a id="suggestLink" class="button" href="https://github.com/Roelatriper/china-meme-dictionary/issues/new?template=meme.yml" target="_blank" rel="noopener">提一个新词 ↗</a></div>
+      <div id="noResults" class="empty-state" hidden><span class="empty-symbol" aria-hidden="true">＋</span><h3>还没收录你要找的词</h3><p>社区可以补充词义、用例与来源，核对后再进入正式词库。</p><a id="suggestLink" class="button" href="#submission">提一个新词 ＋</a></div>
     </section>
-    <section id="api" class="api-section" aria-labelledby="api-title"><div class="api-copy"><span class="eyebrow">02 / FOR BUILDERS</span><h2 id="api-title">让程序也读懂。</h2><p>同一份中文词库，供用户查阅，也供 AI 和应用使用。无需 API Key，保留释义、例句和来源。</p><div class="download-links"><a class="button light" href="./api/v1/all.json" download="china-meme-dictionary.json">下载完整 JSON ↓</a><a class="text-link" href="./api/v1/index.json" target="_blank" rel="noopener">词条索引 ↗</a></div><p class="api-caption">静态 JSON 始终可读。直接查询接口可在本地服务或 Cloudflare 部署后调用。</p><a class="text-link" href="https://github.com/Roelatriper/china-meme-dictionary/blob/main/docs/api.md" target="_blank" rel="noopener">调用文档与示例 ↗</a></div><div class="code-panel"><div class="code-toolbar"><span><i></i><i></i><i></i></span><span>精确查询 · 词库演示</span><button id="copyJson" type="button">复制 JSON</button></div><form id="demoForm" class="demo-form"><label class="sr-only" for="demoTerm">演示查询词名</label><span>term=</span><input id="demoTerm" value="爱你老己" maxlength="128"><button type="submit">运行 →</button></form><pre id="demoOutput" aria-live="polite">正在读取词库…</pre></div></section>
-    <section id="contribute" class="contribute-section" aria-labelledby="contribute-title"><div><span class="eyebrow">03 / BUILT TOGETHER</span><h2 id="contribute-title">你熟悉的语境，<br>正是词典需要的。</h2><p>新词、不同含义、失效来源，都可以一起修订。<br>贡献者提交内容，维护者集中审核，正式词库每周发布。</p><a class="button" href="https://github.com/Roelatriper/china-meme-dictionary/issues/new?template=meme.yml" target="_blank" rel="noopener">提交词条或线索 ↗</a><a class="text-link contribution-guide" href="https://github.com/Roelatriper/china-meme-dictionary/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">贡献指南</a></div><ol class="contribution-steps"><li><span>01</span><div><h3>发现与提词</h3><p>B站、微博、抖音的公开热点与社区提词，进入待核对线索。</p></div></li><li><span>02</span><div><h3>补释义与来源</h3><p>用自己的话解释，附上用例或出处；起源不确定时保留未知。</p></div></li><li><span>03</span><div><h3>审核后发布</h3><p>通过审核的词条进入网站与接口，待审内容继续留在队列。</p></div></li></ol></section>
+    <section id="api" class="api-section" aria-labelledby="api-title"><div class="api-copy"><span class="eyebrow">02 / FOR BUILDERS</span><h2 id="api-title">让程序也读懂。</h2><p>同一份中文词库，供用户查阅，也供 AI 和应用使用。无需 API Key，保留释义、例句和来源。</p><div class="download-links"><a class="button light" href="./api/v1/all.json" download="lans-sea.json">下载完整 JSON ↓</a><a class="text-link" href="./api/v1/index.json" target="_blank" rel="noopener">词条索引 ↗</a></div><p class="api-caption">静态 JSON 始终可读。直接查询接口可在本地服务或 Cloudflare 部署后调用。</p><a class="text-link" href="https://github.com/Roelatriper/lans-sea/blob/main/docs/api.md" target="_blank" rel="noopener">调用文档与示例 ↗</a></div><div class="code-panel"><div class="code-toolbar"><span><i></i><i></i><i></i></span><span>精确查询 · 词库演示</span><button id="copyJson" type="button">复制 JSON</button></div><form id="demoForm" class="demo-form"><label class="sr-only" for="demoTerm">演示查询词名</label><span>term=</span><input id="demoTerm" value="爱你老己" maxlength="128"><button type="submit">运行 →</button></form><pre id="demoOutput" aria-live="polite">正在读取词库…</pre></div></section>
+    <section id="contribute" class="contribute-section" aria-labelledby="contribute-title"><div><span class="eyebrow">03 / BUILT TOGETHER</span><h2 id="contribute-title">你熟悉的语境，<br>正是词典需要的。</h2><p>新词、不同含义、失效来源，都可以一起修订。<br>贡献者提交内容，维护者集中审核，正式词库每周发布。</p><a class="button" href="#submission">提交词条或线索 ＋</a><a class="text-link contribution-guide" href="https://github.com/Roelatriper/lans-sea/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">贡献指南</a></div><ol class="contribution-steps"><li><span>01</span><div><h3>发现与提词</h3><p>B站、微博、抖音的公开热点与社区提词，进入待核对线索。</p></div></li><li><span>02</span><div><h3>补释义与来源</h3><p>用自己的话解释，附上用例或出处；起源不确定时保留未知。</p></div></li><li><span>03</span><div><h3>审核后发布</h3><p>通过审核的词条进入网站与接口，待审内容继续留在队列。</p></div></li></ol></section>
+    <section id="submission" class="submission-section" aria-labelledby="submission-title">
+      <div class="section-heading"><div><span class="eyebrow">04 / ADD A WORD</span><h2 id="submission-title">把你熟悉的词留下来</h2></div><span class="muted">一个词，一份有来源的解释</span></div>
+      <p class="submission-intro">在这里填好内容，预览后到 GitHub 确认提交。需要 GitHub 账号，维护者核对后才会收录。</p>
+      <form id="contributionForm" class="contribution-form">
+        <div class="form-field"><label for="contributionTerm">词名 <span>必填</span></label><input id="contributionTerm" name="term" required maxlength="80" placeholder="例如：你刚看到的新说法" autocomplete="off" aria-describedby="termError"><span id="termError" class="field-error"></span></div>
+        <div class="form-field"><label for="contributionMeaning">含义与使用场景 <span>必填</span></label><textarea id="contributionMeaning" name="meaning" required maxlength="1200" rows="4" placeholder="用自己的话解释它是什么意思、什么场景会用。还不确定，也可以先写“含义待核实”。" aria-describedby="meaningError"></textarea><span id="meaningError" class="field-error"></span></div>
+        <div class="form-field"><label for="contributionExamples">例句或具体用例 <span>选填</span></label><textarea id="contributionExamples" name="examples" maxlength="800" rows="3" placeholder="写一两个例句，注明自编；引用原话请附链接。" aria-describedby="examplesError"></textarea><span id="examplesError" class="field-error"></span></div>
+        <div class="form-field"><label for="contributionSources">来源链接 <span>必填，每行一个</span></label><textarea id="contributionSources" name="sources" required maxlength="2000" rows="3" placeholder="https://…&#10;原帖、视频、词典或媒体报道都可以。" aria-describedby="sourcesError"></textarea><span id="sourcesError" class="field-error"></span></div>
+        <label class="confirmation"><input id="contributionConfirm" type="checkbox" required><span>我已区分自己编写的解释与来源原文，未把未知起源写成事实。</span></label>
+        <div class="form-actions"><button class="button" type="submit">预览提词 →</button><button id="clearContribution" class="text-button" type="button">清空草稿</button><span id="draftStatus" class="muted" role="status">草稿会保存在当前浏览器。</span></div>
+      </form>
+      <div id="contributionPreview" class="contribution-preview" hidden>
+        <span class="eyebrow">YOUR CONTRIBUTION</span><h3 id="contributionPreviewTitle"></h3><pre id="contributionPreviewBody"></pre>
+        <p id="contributionHandoff" role="status"></p><div class="form-actions"><a id="submitContribution" class="button" target="_blank" rel="noopener">到 GitHub 确认提交 ↗</a><button id="copyContribution" class="text-button" type="button">复制草稿</button></div>
+      </div>
+    </section>
     <section class="collection-note" aria-label="采集状态"><span class="dot"></span><p id="collectionStatus">候选线索与正式词条分开保存。</p><a href="./api/v1/candidates.json" target="_blank" rel="noopener">查看候选队列 ↗</a></section>
   </main>
-  <footer class="wrap"><div><strong>梗辞典</strong><p>词义随语境变化，词库随社区成长。</p></div><div class="footer-links"><a href="https://github.com/Roelatriper/china-meme-dictionary" target="_blank" rel="noopener">GitHub ↗</a><a href="https://github.com/Roelatriper/china-meme-dictionary/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a></div><p class="credits">感谢原项目作者、DailyHotApi、NewsNow 的公开实现，以及每一位社区贡献者。</p></footer>
+  <footer class="wrap"><div><strong>迷因之海</strong><p>词义随语境变化，词库随社区成长。</p></div><div class="footer-links"><a href="https://github.com/Roelatriper/lans-sea" target="_blank" rel="noopener">GitHub ↗</a><a href="https://github.com/Roelatriper/lans-sea/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a></div><p class="credits">感谢原项目作者、DailyHotApi、NewsNow、giscus 的公开实现，以及每一位社区贡献者。</p></footer>
   <dialog id="entryDialog" aria-labelledby="detailTerm"><button id="closeDialog" class="close-dialog" aria-label="关闭词条">×</button><div id="detailContent"></div></dialog>
 </body>
 </html>

@@ -11,7 +11,7 @@ export default {
       const response = await env.ASSETS.fetch(new Request(new URL('/api/v1/all.json', url)));
       if (!response.ok) throw new Error('词库不可用');
       const dataset = await response.json();
-      return lookupResponse(dataset, url.searchParams.get('term'), env.SUGGESTION_URL || 'https://github.com/Roelatriper/china-meme-dictionary/issues/new?template=meme.yml');
+      return lookupResponse(dataset, url.searchParams.get('term'), env.SUGGESTION_URL || 'https://github.com/Roelatriper/lans-sea/issues/new?template=meme.yml');
     } catch {
       return Response.json({ error: { code: 'dataset_unavailable', message: '词库暂时不可用' } }, { status: 503, headers });
     }

@@ -1,4 +1,4 @@
-# 梗辞典 · China Meme Dictionary
+# 迷因之海 · Lans Sea
 
 社区维护的中文互联网用语词库，供用户、AI 和应用查阅。第一版提供中文释义、语境、原创例句、核验来源、精确查询与整库下载。
 
@@ -31,11 +31,13 @@ API v1 暂不匹配别名、错字或近似词。网页支持浏览器内搜索�
 
 ## 数据与社区流程
 
-1. 每日采集 B站、微博、抖音的公开标题和链接，进入候选队列；社区也可通过 Issue 提词。
+1. 每日采集 B站、微博、抖音的公开标题和链接，进入候选队列；社区也可在网页填写、预览词条，再到 GitHub 确认提交 Issue。
 2. 贡献者用自己的话编写中文释义、语境与例句，尽量附可核验来源。
 3. 维护者通常每周集中审核 PR。核对通过后设为 `published`，合并即发布；没有审核的内容继续留在队列。
 
 采集器不生成释义、不自动发布、不关闭 Issue。热榜搜索页和热点页只是线索，不能冒充原始出处。构建会阻止缺少来源的正式条目；无来源贡献先保留待审，社区核对后再发布。[贡献指南](CONTRIBUTING.md)
+
+网页提词支持本机草稿保存、来源链接校验和提交前预览。每个词条详情下已接入 giscus 讨论区，按固定词条 ID 区分讨论；当前绑定本仓库的 Announcements 分类。操作说明见 [网页提词与讨论区](docs/community.md)。
 
 ```sh
 node scripts/collect.mjs --dry-run
@@ -52,7 +54,7 @@ GitHub 定时任务先合并已有机器人分支的线索，再更新同一个 
 
 推送到自己的 `main` 后，在仓库 **Settings → Pages → Source** 选择 **GitHub Actions**。`Publish reviewed dictionary` workflow 会校验并直接部署 `dist/`，无需 npm install。
 
-项目默认地址为 `https://Roelatriper.github.io/china-meme-dictionary/`，这是部署目标地址，不表示已经上线。网页所有资源使用相对路径，兼容项目子目录。
+项目默认地址为 `https://Roelatriper.github.io/lans-sea/`，这是部署目标地址，不表示已经上线。网页所有资源使用相对路径，兼容项目子目录。
 
 Pages 是静态服务，不运行 `lookup?term=…`。调用者先读 `/api/v1/index.json`，找到词条 ID，再读 `/api/v1/entries/<id>.json`，也可以一次下载 `all.json`。浏览器跨域 GET 请在上线后实际验收。
 
@@ -96,4 +98,4 @@ docs/                      接口、来源与已有项目调查
 
 ## 感谢
 
-感谢原作者 [WenKanghwdd](https://github.com/WenKanghwdd/china-meme-dictionary)、[DailyHotApi](https://github.com/imsyy/DailyHotApi)、[NewsNow](https://github.com/newsnext/newsnow)、[create-pull-request](https://github.com/peter-evans/create-pull-request) 的公开实现与社区贡献者；本项目保留 MIT 许可证。
+感谢原作者 [WenKanghwdd](https://github.com/WenKanghwdd/china-meme-dictionary)、[DailyHotApi](https://github.com/imsyy/DailyHotApi)、[NewsNow](https://github.com/newsnext/newsnow)、[giscus](https://github.com/giscus/giscus-component)、[create-pull-request](https://github.com/peter-evans/create-pull-request) 的公开实现与社区贡献者；本项目保留 MIT 许可证。

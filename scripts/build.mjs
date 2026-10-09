@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { validateEntries, SCHEMA_VERSION } from '../src/dictionary.mjs';
+import { validateDiscussionConfig } from '../web/discussions.mjs';
 
 export const root = fileURLToPath(new URL('../', import.meta.url));
 export const output = path.join(root, 'dist');
@@ -11,6 +12,7 @@ async function readOptional(file, fallback) {
   catch (error) { if (error.code === 'ENOENT') return fallback; throw error; }
 }
 export async function build() {
+  validateDiscussionConfig(JSON.parse(await readFile(path.join(root, 'web/site-config.json'), 'utf8')));
   const entries = validateEntries(JSON.parse(await readFile(path.join(root, 'data/entries.json'), 'utf8')));
   const observations = await readOptional('data/candidates.json', []);
   if (!Array.isArray(observations)) throw new Error('候选队列必须是数组');
