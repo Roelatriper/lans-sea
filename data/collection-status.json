@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-08T15:52:47.304Z",
+  "collected_at": "2026-10-10T09:47:37.865Z",
   "sources": [
     {
       "platform": "bilibili",
@@ -14,7 +14,7 @@
     {
       "platform": "douyin",
       "ok": true,
-      "count": 46
+      "count": 50
     }
   ]
 }
